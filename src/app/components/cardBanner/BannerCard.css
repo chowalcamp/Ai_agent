@@ -1,0 +1,31 @@
+.banner-card {
+    width: 274px;
+    height: 308px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: linear-gradient(152deg, #192247 0%, #210E17 96.86%);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);  /* 그림자 효과 추가 */
+    display: flex;              /* 추가 */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content h3 {
+    padding-left: 15px;
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 24px;
+    font-style: normal;
+}
+
+.content p {
+    padding: 0px 10px;
+    color: rgba(255, 255, 255, 0.70);
+    font-family: "Inter";
+    font-size: 12px;
+    font-style: normal;
+}
