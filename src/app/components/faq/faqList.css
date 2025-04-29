@@ -1,0 +1,35 @@
+.faq-container {
+    width: 1144px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+  
+  .faq-container h2 {
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: white;
+  }
+
+  
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .faq-container h2 {
+      font-size: 32px;
+    }
+    
+    .accordion-header {
+      font-size: 20px;
+      padding: 16px;
+    }
+    
+    .content-inner {
+      font-size: 16px;
+      padding: 16px;
+    }
+  }

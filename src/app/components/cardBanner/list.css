@@ -1,0 +1,17 @@
+.wrapper {
+    width: 100%;
+    padding: 20px;
+}
+
+.wrapper h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.list {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
