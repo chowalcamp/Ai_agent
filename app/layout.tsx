@@ -1,26 +1,19 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "../components/Navbar"; 
-
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: "PlayAgent - AI Gaming Platform",
-  description: "PlayAgent is a competitive chat-to-earn gaming platform",
-};
+  title: '스트리밍 서비스 클론',
+  description: '스트리밍 서비스 클론 페이지',
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-      </body>
+    <html lang="ko" style={{ margin: 0, padding: 0, height: '100%' }}>
+      <body style={{ margin: 0, padding: 0, height: '100%' }}>{children}</body>
     </html>
-  );
+  )
 }
