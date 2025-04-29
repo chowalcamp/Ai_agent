@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
+    <nav className="fixed w-full z-50 bg-black">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-2xl font-bold">
-            YouTube AI Agent
+            <span className="text-red-600">YouTube</span> AI Agent
           </Link>
           <div className="hidden md:flex space-x-8">
             <Link
