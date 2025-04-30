@@ -5,7 +5,7 @@
   color: white;
   position: relative;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 
@@ -167,13 +167,12 @@
   height: 100px;
   display: flex;
   justify-content: center;
-  overflow: hidden;
 }
 
 .hero-bottom::before {
     content: '';
     position: absolute;
-    width: 1864px;
+    width: 100%;     /*이 부분 수정함 기존 1864px 였음*/
     height: 100%;
     background: linear-gradient(90deg, #210D16 16%, #B82869 25%, #E50914 50%, #B82869 75%, #210D16 84%);
 }

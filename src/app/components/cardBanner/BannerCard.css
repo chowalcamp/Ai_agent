@@ -7,6 +7,7 @@
     backdrop-filter: blur(15px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);  /* 그림자 효과 추가 */
     display: flex;              /* 추가 */
+    position: relative;
 }
 
 .content {
@@ -18,7 +19,7 @@
     padding-left: 15px;
     color: #FFF;
     font-family: "Inter";
-    font-size: 24px;
+    font-size: 22px;
     font-style: normal;
 }
 
@@ -26,6 +27,11 @@
     padding: 0px 10px;
     color: rgba(255, 255, 255, 0.70);
     font-family: "Inter";
-    font-size: 12px;
     font-style: normal;
+}
+
+.banner-icon {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
 }

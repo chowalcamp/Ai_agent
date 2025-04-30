@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Header from './Header'
 import './Hero.css'
 import { ChevronRightIcon } from 'lucide-react'
+import EventSection from './eventSection/eventSection'
 
 export default function Hero() {
   return (
@@ -28,7 +29,7 @@ export default function Hero() {
         </div>
           </div>
         <div className='hero-bottom'>
-        
+          <EventSection />
         </div>
         </div>
       </div>
