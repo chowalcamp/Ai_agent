@@ -10,7 +10,7 @@ export default function Header() {
             src="/NImg.svg"
             alt="로고"
             width={148}
-            height={40}
+            height={60}
           />
         </div>
         <div className="header-actions">

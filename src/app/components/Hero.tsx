@@ -12,7 +12,7 @@ export default function Hero() {
         alt="배경"
         fill
         priority
-        style={{ objectFit: 'cover', zIndex: 0 }}
+        style={{ objectFit: 'cover', opacity: 0.12 }}
       />
       <div className='content-container'>
         <Header />
@@ -28,6 +28,7 @@ export default function Hero() {
         </div>
           </div>
         <div className='hero-bottom'>
+        
         </div>
         </div>
       </div>
