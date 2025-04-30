@@ -11,7 +11,7 @@ interface YouTubeVideo {
     description: string;
     thumbnails: {
       default: { url: string };
-      medium: { url: string };
+      medium: { url: string};
       high: { url: string };
     };
     channelTitle: string;
