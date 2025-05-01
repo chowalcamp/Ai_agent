@@ -1,7 +1,25 @@
+"use client"
+
 import Image from 'next/image'
 import './Header.css'
+import { useRouter, usePathname } from 'next/navigation'
+import { useState } from 'react'
+import { AlignJustify, HammerIcon } from 'lucide-react'
 
 export default function Header() {
+  const router = useRouter()
+  const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const handleHomeClick = () => {
+    if (pathname === '/') {
+      // 현재 홈페이지에 있다면 최상단으로 스크롤
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      // 다른 페이지에 있다면 홈페이지('/')로 이동
+      router.push('/')
+    }
+  }
   return (
     <header className="header">
       <div className="header-content">
@@ -14,6 +32,26 @@ export default function Header() {
           />
         </div>
         <div className="header-actions">
+        <button 
+          className={`hamburger-btn ${isMenuOpen ? 'active' : ''}`} 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <AlignJustify />
+        </button>
+          <div className={`header-menu-bar ${isMenuOpen ? 'active' : ''}`}>
+            <div className="header-menu-bar-item" onClick={handleHomeClick}>
+              HOME
+            </div>
+            <div className="header-menu-bar-item">
+              VIDEO AI
+            </div>
+            <div className="header-menu-bar-item" onClick={() => {
+              document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' });
+              setIsMenuOpen(false);
+            }}>
+              FAQ
+            </div>
+          </div>
           <button className="language-btn">
             <Image
               src="/icons/lang.svg"

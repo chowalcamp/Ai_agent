@@ -4,7 +4,7 @@ import './eventSection.css'
 export default function EventSection() {
     return (
         <div className="event-section">
-            <Image src="/icons/popcorn.svg" alt="popcorn" width={76} height={76} />
+            <Image src="/icons/popcorn.svg" alt="popcorn" className="event-section-icon" width={76} height={76} />
             <div className="event-section-content">
                 <div>
                     <p className="event-section-title">
