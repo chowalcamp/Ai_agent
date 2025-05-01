@@ -1,11 +1,11 @@
 'use client';
 
-import ChatAi from "../components/chatAi/chatAi";
+import ChatScript from "../components/chatAi/chatScript";
 
 export default function ChatAiPage() {
             return (
         <main>
-            <ChatAi />
+            <ChatScript />
         </main>
     );
 }   

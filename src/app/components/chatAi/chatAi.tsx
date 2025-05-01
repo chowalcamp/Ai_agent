@@ -2,9 +2,6 @@
 
 import "./chatAi.css";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { getVideoRecommendationResponse } from "@/apis/chat";
-import { GPTMessage } from "@/apis/openai";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -13,87 +10,19 @@ interface ChatMessage {
   videos?: any[];
 }
 
-export default function ChatAi() {
-  const [messages, setMessages] = useState<ChatMessage[]>(() => {
-    // 클라이언트 사이드에서만 localStorage를 사용하기 위한 체크
-    if (typeof window !== "undefined") {
-      const savedMessages = localStorage.getItem("chatMessages");
-      return savedMessages
-        ? JSON.parse(savedMessages)
-        : [
-            {
-              role: "assistant",
-              content:
-                "Hello! I'm your Video AI agent. I'm part of a decentralized AI lifecycle on the blockchain. How can I help you today? ✨",
-              timestamp: new Date().toLocaleTimeString([], {
-                hour: "2-digit",
-                minute: "2-digit",
-              }),
-            },
-          ];
-    }
-    return [];
-  });
-  const [inputMessage, setInputMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+interface ChatAiProps {
+  messages: ChatMessage[];
+  inputMessage: string;
+  isLoading: boolean;
+  setInputMessage: (message: string) => void;
+  handleSubmit: () => void;
+}
 
-  const handleSubmit = async () => {
-    if (!inputMessage.trim()) return;
+export default function ChatAi({ messages, inputMessage, isLoading, setInputMessage, handleSubmit }: ChatAiProps) {
+  if (!messages) {
+    return null; // or some loading state
+  }
 
-    const currentTime = new Date().toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-
-    const userMessage: ChatMessage = {
-      role: "user",
-      content: inputMessage,
-      timestamp: currentTime,
-    };
-
-    setMessages((prev) => [...prev, userMessage]);
-    setInputMessage("");
-    setIsLoading(true);
-
-    try {
-      // GPT 메시지 형식으로 변환
-      const gptMessages: GPTMessage[] = messages.map((msg) => ({
-        role: msg.role,
-        content: msg.content,
-      }));
-      gptMessages.push({ role: "user", content: inputMessage });
-
-      // 비디오 추천 응답 받기
-      const response = await getVideoRecommendationResponse(gptMessages);
-
-      // AI 응답 추가
-      const assistantMessage: ChatMessage = {
-        role: "assistant",
-        content: response.recommendationMessage,
-        timestamp: new Date().toLocaleTimeString([], {
-          hour: "2-digit",
-          minute: "2-digit",
-        }),
-        videos: response.videos,
-      };
-
-      setMessages((prev) => [...prev, assistantMessage]);
-    } catch (error) {
-      console.error("Error:", error);
-      // 에러 메시지 추가
-      const errorMessage: ChatMessage = {
-        role: "assistant",
-        content: "죄송합니다. 오류가 발생했습니다. 다시 시도해 주세요.",
-        timestamp: new Date().toLocaleTimeString([], {
-          hour: "2-digit",
-          minute: "2-digit",
-        }),
-      };
-      setMessages((prev) => [...prev, errorMessage]);
-    } finally {
-      setIsLoading(false);
-    }
-  };
   return (
     <div className="chat-ai-container">
       <Image
