@@ -77,10 +77,14 @@ export default function ChatAi() {
           {/* Footer Stats */}
           <div className="stats-container">
             <div className="user-container">
-              <div className="background-dot" style={{marginBottom: '20px'}}></div>
+              <div className="background-dot" style={{marginLeft: '10px', marginRight: '10px'}}></div>
               <p className="monthly-users">31235 Monthly Active Users</p>
             </div>
+            <div className="video-ai-text">
+              <p>Video AI에게 영상을 추천받으세요.</p>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
