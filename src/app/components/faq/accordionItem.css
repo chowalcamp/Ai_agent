@@ -1,9 +1,12 @@
 .accordion-item {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
   }
   
   .accordion-header {
-    width: 1144px;
+    width: 100%;
+    max-width: 1144px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,6 +25,9 @@
   }
   
   .accordion-content {
+    width: 100%;
+    max-width: 1144px;
+    margin: 0 auto;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
@@ -38,3 +44,29 @@
     font-size: 18px;
     line-height: 1.5;
   }
+
+  /* 태블릿 화면 (768px) */
+@media (max-width: 768px) {
+  .accordion-header {
+      padding: 20px;
+      font-size: 18px;
+  }
+
+  .content-inner {
+      padding: 20px;
+      font-size: 14px;
+  }
+}
+
+/* 모바일 화면 (390px) */
+@media (max-width: 390px) {
+  .accordion-header {
+      padding: 16px;
+      font-size: 16px;
+  }
+
+  .content-inner {
+      padding: 16px;
+      font-size: 12px;
+  }
+}

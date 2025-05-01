@@ -5,14 +5,15 @@
     border-radius: 16px;
     background: linear-gradient(152deg, #192247 0%, #210E17 96.86%);
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);  /* 그림자 효과 추가 */
-    display: flex;              /* 추가 */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     position: relative;
+    overflow: hidden;
 }
 
 .content {
     display: flex;
     flex-direction: column;
+    /* padding: 24px; */
 }
 
 .content h3 {
@@ -34,4 +35,53 @@
     position: absolute;
     right: 15px;
     bottom: 15px;
+}
+
+/* 1200px 이하에서만 변경되는 스타일 */
+@media (max-width: 1200px) {
+    .banner-card {
+        width: 100%;
+        min-height: 180px;
+        height: auto;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 5px 12px;
+        padding-right: 100px;
+    }
+
+    .banner-icon {
+        position: absolute;
+        right: 24px;
+        bottom: 24px;
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-card {
+        min-height: 150px;
+    }
+
+    .content {
+        padding: 16px;
+        padding-right: 80px;
+    }
+
+    .content h3 {
+        font-size: 18px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .banner-icon {
+        width: 48px;
+        height: 48px;
+        right: 25px;
+        bottom: 25px;
+    }
 }

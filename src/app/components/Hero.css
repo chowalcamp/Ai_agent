@@ -8,8 +8,6 @@
   /* overflow: hidden; */
 }
 
-
-
 .hero-section::before {
   content: '';
   position: absolute;
@@ -180,19 +178,20 @@
 /* 반응형 디자인 */
 @media (max-width: 768px) {
   .hero-section {
-    width: 768px;
+    width: 100%;
     height: 664px;
 
   }
 
   .hero-content {
-    width: 432px;
+    width: 80%;
     height: 244px;
   }
 
   .title {
     font-weight: bold;
     font-size: 32px;
+    padding: 0 20px;
     line-height: 40px;
   }
 
@@ -207,18 +206,22 @@
     line-height: 24px;
     font-weight: 300;
   }
+
+  .form-group {
+    display: flex;
+  }
   
   .input {
-    width: 243px;
-    height: 56px;
+    width: 180px;
+    height: 40px;
     font-size: 16px;
     font-weight: 300;
   }
 
   .button {
-    width: 180px;
-    height: 56px;
-    font-size: 16px;
+    width: 120px;
+    height: 40px;
+    font-size: 12px;
     font-weight: 600;
   }
   .button svg {
@@ -232,18 +235,16 @@
    
     .hero-bottom {
       position: relative;
-      bottom: 0;
       width: 100%;
       height: 100px;
       display: flex;
       justify-content: center;
-      overflow: hidden;
     }
     
     .hero-bottom::before {
       content: '';
       position: absolute;
-      width: 1374px;
+      width: 100%;
       height: 100%;
       background: linear-gradient(90deg, #210D16 16%, #B82869 25%, #E50914 50%, #B82869 75%, #210D16 84%);
     }
@@ -251,7 +252,7 @@
 
 @media (max-width: 390px) {
   .hero-section {
-    width: 390px;
+    width: 100%;
     height: 664px;
 
   }
@@ -309,7 +310,7 @@
 
   .hero-bottom {
     bottom: 0;
-    width: 390px;
+    width: 100%;
     height: 100px;
     background: linear-gradient(90deg, #210D16 16%, #B82869 25%, #E50914 50%, #B82869 75%, #210D16 84%);
     }

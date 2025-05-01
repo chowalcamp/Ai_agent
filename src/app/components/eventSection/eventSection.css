@@ -1,23 +1,23 @@
 .event-section {
     position: absolute;
     bottom: -45px;
-    max-width: 1144px;
+    /* max-width: 1144px; */
     width: 100%;
-    height: 77px;
+    min-height: 77px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
-    margin: 0 auto;
+    /* margin: 0 30px; */
 }
 
 .event-section-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 986px;
-    width: 100%;
-    height: 44px;
+    /* max-width: 986px; */
+    width: 55%;
+    min-height: 44px;
     border-radius: 16px;
     background: linear-gradient(90deg, #261733 0%, #151A3F 100%);
     padding: 20px 32px;
@@ -53,4 +53,84 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .event-section {
+        width: 100%;
+        bottom: -45px;
+        padding: 0;
+    }
+
+    .event-section-icon {
+        width: 76px;
+        height: 76px;
+    }
+
+    .event-section-content {
+        width: 100%;
+        padding: 16px 24px;
+        display: flex;
+        text-align: left;
+        justify-content: space-between;
+
+    }
+
+    .event-section-title {
+        font-size: 18px;
+    }
+
+    .event-section-sub_title {
+        font-size: 14px;
+    }
+
+    .event-section-button {
+        width: auto;
+        padding: 0 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 390px) {
+    .event-section {
+        bottom: -45px;
+        padding: 0 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+    }
+
+    .event-section-icon {
+        position: absolute;
+        top: -40px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .event-section-content {
+        padding: 12px;
+        flex-direction: column;
+        width: 93%;
+        height: auto;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .event-section-title {
+        font-size: 18px;
+    }
+
+    .event-section-sub_title {
+        font-size: 12px;
+    }
+
+    .event-section-button {
+        width: 100px;
+        height: 50px;
+        font-size: 14px;
+    }
 }

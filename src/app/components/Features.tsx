@@ -15,7 +15,7 @@ export default function Features() {
         <List />
         </div>
       </div>
-      <div className="feature-item">
+      <div id="faq-section" className="feature-item">
         <div className="feature-content">
         <FaqList />
         </div>
