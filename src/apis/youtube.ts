@@ -6,13 +6,15 @@ export interface YouTubeVideo {
   thumbnail: string;
 }
 
+const apiKey = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
+
 export async function searchYouTubeVideos(
   keyword: string
 ): Promise<YouTubeVideo[]> {
   const res = await fetch(
     `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(
       keyword
-    )}&key=${"AIzaSyC7ECuX_1v9EJs51ryW8a2LnfZEzTvyLjk"}&type=video&maxResults=3`
+    )}&key=${apiKey}&type=video&maxResults=3`
   );
 
   const data = await res.json();

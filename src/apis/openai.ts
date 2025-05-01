@@ -5,6 +5,8 @@ export interface GPTMessage {
   content: string;
 }
 
+const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+
 // 대화형 처리형
 export async function getSearchKeywordFromMessage(
   messages: GPTMessage[]
@@ -12,7 +14,7 @@ export async function getSearchKeywordFromMessage(
   const res = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${"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"}`,
+      Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
@@ -81,7 +83,7 @@ export async function generateVideoRecommendationMessage(
   const res = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${"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"}`,
+      Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
