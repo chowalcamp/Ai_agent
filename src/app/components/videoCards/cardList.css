@@ -103,6 +103,10 @@
     max-width: 704px;
   }
 
+  .card-list-wrapper h2 {
+    font-size: 32px;
+  }
+
   .card-list {
     display: flex;
     gap: 20px;
@@ -150,6 +154,10 @@
       width: 100%;
       max-width: 390px;
       padding: 0 10px;
+    }
+
+    .card-list-wrapper h2 {
+      font-size: 28px;
     }
 
     .card-list-container {

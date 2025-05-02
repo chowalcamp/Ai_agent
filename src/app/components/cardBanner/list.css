@@ -1,15 +1,14 @@
-.wrapper {
+.BC-wrapper {
     width: 100%;
-    /* padding: 20px; */
 }
 
-.wrapper h2 {
+.BC-wrapper h2 {
     color: white;
     font-size: 48px;
     margin-bottom: 20px;
 }
 
-.list {
+.BC-list {
     display: flex;
     gap: 16px;
     overflow-x: auto;
@@ -17,8 +16,20 @@
 }
 
 @media (max-width: 1200px) {
-    .list {
+    .BC-list {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .BC-wrapper h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 390px) {
+    .BC-wrapper h2 {
+        font-size: 28px;
     }
 }

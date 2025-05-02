@@ -3,9 +3,9 @@ import './list.css'
 
 export default function List() {
     return (
-        <div className="wrapper">
-            <h2 style={{fontSize: '48px'}}>More Reasons to Join</h2>
-            <div className="list">
+        <div className="BC-wrapper">
+            <h2>More Reasons to Join</h2>
+            <div className="BC-list">
                 <BannerCard 
                     title="Enjoy on your TV" 
                     subtitle="Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more."

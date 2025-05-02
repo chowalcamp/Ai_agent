@@ -29,7 +29,7 @@ export default function CardList() {
 
   return (
     <div className="card-list-wrapper">
-      <h2 style={{fontSize: '48px'}}>Trending Now</h2>
+      <h2>Trending Now</h2>
       <div className="card-list-container">
         <div className="card-list-left-arrow" onClick={() => handleScroll('left')}>
           <ChevronLeftIcon size={30} />

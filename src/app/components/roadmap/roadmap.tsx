@@ -1,15 +1,14 @@
 import { Brain, Circle, CircleSmall, Coins, Globe, Users } from 'lucide-react';
 import './roadmap.css'
-import Image from 'next/image';
 
 export default function RoadMap() {
     return (
       <section className="roadmap-section">
         <h1 className="roadmap-title">Roadmap 2025</h1>
-        <p className="roadmap-subtitle">
+        <div className="roadmap-subtitle">
           Our strategic vision for innovation and growth throughout 2025.
           <div className='roadmap-subtitle-line'></div>
-        </p>
+        </div>
   
         <div className="roadmap-timeline">
           <div className="timeline-item">

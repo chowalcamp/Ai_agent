@@ -15,39 +15,10 @@
   padding: 0 2rem;
 }
 
-.feature-content h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.feature-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 800px;
-}
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
   .features-section {
     padding: 2rem 0;
-  }
-  
-  .feature-content h2 {
-    font-size: 2rem;
-  }
-  
-  .feature-content p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .feature-content h2 {
-    font-size: 1.8rem;
-  }
-  
-  .feature-content p {
-    font-size: 0.9rem;
   }
 }
