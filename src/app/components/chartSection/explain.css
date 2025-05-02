@@ -1,0 +1,129 @@
+.explain-container {
+    width: calc(100% - 400px);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.explain-title-container {
+    padding: 10px;
+}
+
+.explain-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.explain-subtitle {
+    font-size: 18px;
+    color: rgba(209, 213, 220, 0.8);
+}
+
+.explain-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.explain-content-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    border: 1px solid rgba(30, 41, 57, 1);
+    border-radius: 10px;
+    padding: 5px 30px;
+    width: 90%;
+}
+
+.explain-content-item:hover {
+    background-color: rgba(30, 41, 57, 1);
+}
+
+.explain-icon-background {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(251, 44, 54, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.explain-content-item-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.explain-content-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFF;
+    margin: 10px 0;
+}
+
+.explain-content-item-text {
+    font-size: 14px;
+    margin-top: 0;
+    color: rgba(209, 213, 220, 0.8);
+}
+
+@media (max-width: 768px) {
+    .explain-container {
+        width: 100%;
+    }
+
+    .explain-content-item {
+        width: 88%;
+    }
+
+    .explain-content-item-text-container {
+        width: 100%;
+    }
+    
+    .explain-content-item-title {
+        font-size: 20px;
+    }
+    
+    .explain-content-item-text {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 390px) {
+    .explain-container {
+        width: 100%;
+    }
+
+    .explain-icon-background {
+        width: 40px;
+        height: 40px;
+    }
+
+    .explain-content-item {
+        width: 95%;
+        padding: 5px 10px;
+        gap: 20px;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .explain-content-item-text-container {
+        width: 80%;
+    }
+
+    .explain-content-item-title {
+        font-size: 16px;
+    }
+
+    .explain-content-item-text {
+        font-size: 12px;
+    }
+}

@@ -1,7 +1,6 @@
 .faq-container {
     width: 100%;
     max-width: 1144px;
-    /* margin: 0 auto; */
     padding: 48px 0px;
   }
   
@@ -43,9 +42,6 @@
 
   /* 모바일 화면 추가 */
   @media (max-width: 390px) {
-    .faq-container {
-        /* padding: 24px 12px; */
-    }
 
     .faq-container h2 {
         font-size: 28px;
