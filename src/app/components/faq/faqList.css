@@ -44,7 +44,7 @@
   /* 모바일 화면 추가 */
   @media (max-width: 390px) {
     .faq-container {
-        padding: 24px 12px;
+        /* padding: 24px 12px; */
     }
 
     .faq-container h2 {

@@ -62,7 +62,10 @@
 @media (max-width: 390px) {
   .accordion-header {
       padding: 16px;
-      font-size: 16px;
+  }
+
+  .accordion-header span {
+    font-size: 16px;
   }
 
   .content-inner {

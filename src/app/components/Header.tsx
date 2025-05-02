@@ -20,6 +20,11 @@ export default function Header() {
       router.push('/')
     }
   }
+
+  const handleChatAiClick = () => {
+    router.push('/chatAi')
+  }
+
   return (
     <header className="header">
       <div className="header-content">
@@ -42,7 +47,7 @@ export default function Header() {
             <div className="header-menu-bar-item" onClick={handleHomeClick}>
               HOME
             </div>
-            <div className="header-menu-bar-item">
+            <div className="header-menu-bar-item" onClick={handleChatAiClick}>
               VIDEO AI
             </div>
             <div className="header-menu-bar-item" onClick={() => {
