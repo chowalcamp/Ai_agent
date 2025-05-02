@@ -1,0 +1,27 @@
+
+.donutChart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.donutChart-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 70px;
+}
+
+@media (max-width: 768px) {
+    .donutChart-title {
+        /* font-size: 18px; */
+    }
+}
+
+@media (max-width: 390px) {
+    .donutChart-title {
+        /* font-size: 14px; */
+    }
+}
+

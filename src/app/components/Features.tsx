@@ -3,6 +3,7 @@ import './Features.css'
 import CardList from './videoCards/cardList'
 import FaqList from './faq/faqList'
 import RoadMap from './roadmap/roadmap'
+import ChartSection from './chartSection/chartSection'
 export default function Features() {
   return (
     <section className="features-section">
@@ -16,6 +17,11 @@ export default function Features() {
         <List />
         </div>
       </div>
+      <div className="feature-item">
+        <div className="feature-content">
+        <ChartSection />
+        </div>
+      </div>  
       <div className="feature-item">
         <div className="feature-content">
         <RoadMap />
