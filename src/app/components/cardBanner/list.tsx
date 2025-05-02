@@ -4,7 +4,7 @@ import './list.css'
 export default function List() {
     return (
         <div className="wrapper">
-            <h2>More Reasons to Join</h2>
+            <h2 style={{fontSize: '48px'}}>More Reasons to Join</h2>
             <div className="list">
                 <BannerCard 
                     title="Enjoy on your TV" 
