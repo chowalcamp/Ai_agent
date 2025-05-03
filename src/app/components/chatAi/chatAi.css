@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 8px 30px;
+  padding: 100px 0px 200px 0px;
   isolation: isolate;
   width: 100%;
   height: 100%;
@@ -44,18 +44,16 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 16px;
   gap: 16px;
-  width: 752px;
-  max-width: 896px;
+  width: 1148px;
+  max-width: 1148px;
   z-index: 2;
 }
 
 .overlay-border-shadow-overlayblur {
   box-sizing: border-box;
-  width: 720px;
+  width: 1148px;
   height: calc(100vh - 100px);
-  border: 1px solid #e2e8f0;
   backdrop-filter: blur(6px);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.3);
@@ -76,7 +74,7 @@
   width: 200px;
   height: 26px;
   top: 73px;
-  border: 1px solid #888888;
+  border: 1px solid #F5F5F5;
   border-radius: 3.35544e7px;
   opacity: 0.9;
 }
@@ -87,7 +85,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  color: #888888;
+  color: #F5F5F5;
   justify-content: center;
   opacity: 0.9;
 }
@@ -150,6 +148,7 @@
   justify-content: center;
   align-items: center;
   padding: 0px;
+  border: 1px solid #F5F5F5;
   position: absolute;
   width: 32px;
   height: 32px;
@@ -161,11 +160,12 @@
   border-radius: 3.35544e7px;
 }
 
-.ghibli-logo {
+.logo {
   width: 32px;
   max-width: 32px;
   height: 32px;
 }
+
 
 .paragraph-background-shadow {
   position: absolute;
@@ -203,26 +203,25 @@
 .form {
   box-sizing: border-box;
   width: 100%;
-  width: 720px;
+  width: 1148px;
   height: 167px;
   background: rgba(255, 255, 255, 0.3);
-  border: 1px solid #e2e8f0;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
     0px 1px 2px -1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6px);
   border-radius: 16px;
-  position: relative;
 }
 
 .input {
   height: 60px;
-  width: 642px;
+  width: 1148px;
   margin: 15px;
   border-radius: 16px;
+  padding-bottom: 10px;
 }
 
 .textarea-field {
-  width: 618px;
+  width: 1148px;
   height: 60px;
   font-family: "Inter";
   font-weight: 500;
@@ -232,49 +231,23 @@
   outline: none;
   margin: 10px 11px 13px 11px;
   resize: none;
-  color: #333;
+  color: #F5F5F5;
+  opacity: 0.9;
   line-height: 1.5;
-}
-
-/* 스크롤바 전체 스타일 */
-.textarea-field::-webkit-scrollbar {
-  width: 8px;
-  background: transparent;
-}
-
-/* 스크롤바 트랙 */
-.textarea-field::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-/* 스크롤바 핸들 */
-.textarea-field::-webkit-scrollbar-thumb {
-  background: rgba(229, 9, 20, 0.5);
-  border-radius: 4px;
-}
-
-/* 스크롤바 핸들 호버 효과 */
-.textarea-field::-webkit-scrollbar-thumb:hover {
-  background: rgba(229, 9, 20, 0.8);
-}
-
-/* 스크롤바 코너 */
-.textarea-field::-webkit-scrollbar-corner {
-  background: transparent;
+  overflow-y: auto;
 }
 
 .textarea-field::placeholder {
-  color: #94a3b8;
-  opacity: 0.8;
+  color: #F5F5F5;
+  opacity: 0.9;
 }
 
 .button {
   position: absolute;
   width: 44px;
   height: 44px;
-  left: 663px;
-  top: calc(50% - 50px / 2 - 31px);
+  right: 20px;
+  top: 35px;
   border-radius: 3.35544e7px;
   border: none;
   cursor: pointer;
@@ -285,7 +258,7 @@
 }
 
 .button:hover {
-  background: #cbd5e1;
+  background: #000000;
 }
 
 .send-icon {
@@ -300,7 +273,7 @@
   border-radius: 0px 0px 16px 16px;
   justify-content: space-between;
   padding: 10px;
-  margin-top: 25px;
+  margin-top: 28px;
 }
 
 .monthly-users {
@@ -329,7 +302,9 @@
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 10px;
-  height: calc(100vh - 250px);
+  height: calc(100vh - 350px);
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .message {
@@ -338,7 +313,6 @@
   margin-bottom: 0.5rem;
   position: relative;
 }
-
 
 .message.user {
   justify-content: flex-end;
@@ -357,28 +331,57 @@
   left: 0;
   top: 0;
   margin: 5px;
-  padding: 15px;
+  padding: 5px 15px 15px 15px;
 }
 
 .message.user .paragraph-background-shadow {
   background: #E50914;
-  border-radius: 15px 15px 0 15px;
+  border-radius: 15px 15px 15 15px;
+  position: relative;
+}
 
-
+.message.user .paragraph-background-shadow::before {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 15px;
+  width: 12px;
+  height: 20px;
+  background: #E50914;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
 .message.assistant .paragraph-background-shadow {
   background: #333333;
-  border-radius: 15px 15px 15px 0;
+  border-radius: 15px 15px 15px 15;
   margin-right: auto;
   margin-left: 30px;
+  position: relative;
+}
 
+.message.assistant .paragraph-background-shadow::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 15px;
+  width: 12px;
+  height: 20px;
+  background: #333333;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
 }
 
 .message.assistant .overlay-shadow {
   position: relative;
   left: 15px;
   top: 15px;
+}
+
+.message.user .overlay-shadow.user-icon {
+  position: relative;
+  right: -15px;
+  top: 15px;
+  order: 2;
+  margin-right: 15px;
 }
 
 .message .paragraph-background-shadow p {
@@ -394,7 +397,7 @@
   position: relative;
   font-size: 12px;
   color: rgba(255, 255, 255, 1);
-  margin-top: 5px;
+  margin-top: 10px;
   right: auto;
   top: auto;
   text-align: right;
@@ -412,6 +415,8 @@
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s;
+  margin: 5px;
+  padding: 5px;
 }
 
 .video-item:hover {
@@ -423,12 +428,13 @@
   color: inherit;
   display: flex;
   flex-direction: column;
+  margin: 5px;
 }
 
 .video-thumbnail {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 24/8;
 }
 
 .video-title {
@@ -468,50 +474,117 @@
   cursor: not-allowed;
 }
 
+/* 공통 스크롤바 스타일 */
+.messages-container::-webkit-scrollbar,
+.textarea-field::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+.messages-container::-webkit-scrollbar-track,
+.textarea-field::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 0px 0 10px 0;
+}
+
+.messages-container::-webkit-scrollbar-thumb,
+.textarea-field::-webkit-scrollbar-thumb {
+  background: rgba(229, 9, 20, 0.5);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.messages-container::-webkit-scrollbar-thumb:hover,
+.textarea-field::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 9, 20, 0.8);
+}
+
+.messages-container::-webkit-scrollbar-corner,
+.textarea-field::-webkit-scrollbar-corner {
+  display: none;
+}
+
 /* 메시지 컨테이너 스크롤바 스타일 */
 .messages-container::-webkit-scrollbar {
   width: 8px;
   background: transparent;
 }
 
-.messages-container::-webkit-scrollbar-track {
+.messages-container .user::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  border-radius: 10px;
+  margin: 0px 0 10px 0;
 }
 
-.messages-container::-webkit-scrollbar-thumb {
+.messages-container .user::-webkit-scrollbar-thumb {
   background: rgba(229, 9, 20, 0.5);
-  border-radius: 4px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
 }
 
-.messages-container::-webkit-scrollbar-thumb:hover {
+.messages-container .user::-webkit-scrollbar-thumb:hover {
   background: rgba(229, 9, 20, 0.8);
 }
 
-.messages-container::-webkit-scrollbar-corner {
+.messages-container .user::-webkit-scrollbar-corner {
   display: none;
 }
 
-/* 오버레이 컨테이너 스크롤바 스타일 */
-.overlay-border-shadow-overlayblur::-webkit-scrollbar {
-  width: 8px;
+
+
+
+@media (max-width: 768px) and (min-width: 375px) {
+  .chat-ai-container {
+    width: 100%;
+    min-width: 375px;
+    margin: 0 auto;
+    padding: 100px 30px 200px 30px;
+  }
+
+  
+  .main {
+    gap: 8px;
+    width: 100%;
+    min-width: 375px;
+    z-index: 2;
+  }
+
+  .overlay-border-shadow-overlayblur {
+    width: 100%;
+    height: calc(100vh - 100px);
+  }
+  
+  .form {
+  box-sizing: border-box;
+  width: 100%;
+  height: 167px;
+}
+
+.input {
+  height: 60px;
+  width: 100%;
+}
+
+.textarea-field {
+  width: 100%;
+  height: 60px;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
   background: transparent;
+  outline: none;
+  margin: 10px 11px 13px 11px;
+  resize: none;
+  color: #F5F5F5;
+  opacity: 0.9;
+  line-height: 1.5;
+  overflow-y: auto;
+}
 }
 
-.overlay-border-shadow-overlayblur::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
 
-.overlay-border-shadow-overlayblur::-webkit-scrollbar-thumb {
-  background: rgba(229, 9, 20, 0.5);
-  border-radius: 4px;
-}
 
-.overlay-border-shadow-overlayblur::-webkit-scrollbar-thumb:hover {
-  background: rgba(229, 9, 20, 0.8);
-}
-
-.overlay-border-shadow-overlayblur::-webkit-scrollbar-corner {
-  background: transparent;
-}

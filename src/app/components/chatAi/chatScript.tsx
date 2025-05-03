@@ -1,10 +1,8 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { getVideoRecommendationResponse } from "@/apis/chat";
 import { GPTMessage } from "@/apis/openai";
 import ChatAi from "./chatAi";
-
+import Header from "../Header";
 interface ChatMessage {
   role: "user" | "assistant";
   content: string;
@@ -100,13 +98,12 @@ export default function ChatScript(): JSX.Element {
   };
   return (
     <div>
-      <ChatAi
-        messages={messages}
-        inputMessage={inputMessage}
-        isLoading={isLoading}
-        setInputMessage={setInputMessage}
-        handleSubmit={handleSubmit}
-      />
+      <ChatAi 
+      messages={messages} 
+      inputMessage={inputMessage} 
+      isLoading={isLoading} 
+      setInputMessage={setInputMessage} 
+      handleSubmit={handleSubmit} />
     </div>
   );
 }

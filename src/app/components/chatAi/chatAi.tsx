@@ -37,11 +37,11 @@ export default function ChatAi({ messages, inputMessage, isLoading, setInputMess
   return (
     <div className="chat-ai-container">
       <Image
-        src="/BackgroundImg.jpg"
+        src="/main-BG.png"
         alt="배경"
         fill
         priority
-        style={{ objectFit: "cover" }}
+        style={{ objectFit: "cover"}}
       />
       <div className="background">
         <div className="image">
@@ -74,11 +74,22 @@ export default function ChatAi({ messages, inputMessage, isLoading, setInputMess
                 {message.role === "assistant" && (
                   <div className="overlay-shadow">
                     <Image
-                      src="/ghibli-logo.png"
+                      src="/logo.png"
                       alt="Video AI Logo"
                       width={32}
                       height={32}
-                      className="ghibli-logo"
+                      className="logo"
+                    />
+                  </div>
+                )}
+                {message.role === "user" && (
+                  <div className="overlay-shadow user-icon">
+                    <Image
+                      src="/user-icon.png"
+                      alt="User Icon"
+                      width={32}
+                      height={32}
+                      className="logo"
                     />
                   </div>
                 )}
