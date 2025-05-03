@@ -30,7 +30,7 @@
     text-align: center;
     width: 30%;
     height: 4px;
-    background-color: rgba(193, 0, 7, 1);
+    background-color:  rgba(140, 60, 255, 0.9);
     margin-top: 12px;
     border-radius: 10px;
   }
@@ -50,7 +50,7 @@
     transform: translateX(-50%);
     width: 4px;
     height: 100%;
-    background-color: #E50914;
+    background-color: rgba(180, 63, 255, 1);
   }
 
   .timeline-dot {
@@ -61,7 +61,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: #E50914;
+    background-color: rgba(60, 148, 255, 1);
   }
   
   .timeline-item {
@@ -121,22 +121,22 @@
   }
   
   .current .status {
-    background-color: rgba(130, 24, 26, 1);
+    background-color: rgba(140, 60, 255, 0.9); /* 진한 네온 퍼플 */
     color: #fff;
   }
   
   .upcoming .status {
-    background-color: rgba(159, 7, 18, 1);
+    background-color: rgba(140, 60, 255, 0.3); /* 같은 색상, 투명도 낮춤 */
     color: #fff;
   }
   
   .planned .status {
-    background-color: rgba(193, 0, 7, 1);
+    background-color: rgba(100, 50, 180, 0.9); /* 어두운 퍼플 블렌드 */
     color: #fff;
   }
   
   .future .status {
-    background-color: rgba(251, 44, 54, 1);
+    background-color: rgba(100, 50, 180, 0.3); /* planned보다 연한 투명도 */
     color: #fff;
   }
   

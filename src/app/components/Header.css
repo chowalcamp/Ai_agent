@@ -46,7 +46,7 @@
 }
 
 .header-menu-bar-item:hover {
-  color: #E50914;
+  color: rgba(140, 60, 255, 0.9);
 }
 
 .language-btn {
@@ -71,7 +71,7 @@
 
 .sign-in-btn {
   border-radius: 4px;
-  background: #E50914;
+  background: rgba(54,8,75,0.9);
   width: 76.91px;
   height: 32px;
   flex-shrink: 0;
@@ -83,7 +83,7 @@
 }
 
 .sign-in-btn:hover {
-  background: #f40612;
+  background: rgba(140, 60, 255, 0.9);
 }
 
 .hamburger-btn {
