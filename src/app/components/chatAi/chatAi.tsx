@@ -2,6 +2,7 @@
 
 import "./chatAi.css";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -19,6 +20,16 @@ interface ChatAiProps {
 }
 
 export default function ChatAi({ messages, inputMessage, isLoading, setInputMessage, handleSubmit }: ChatAiProps) {
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
   if (!messages) {
     return null; // or some loading state
   }
@@ -101,6 +112,7 @@ export default function ChatAi({ messages, inputMessage, isLoading, setInputMess
                 </div>
               </div>
             ))}
+            <div ref={messagesEndRef} />
           </div>
         </div>
 

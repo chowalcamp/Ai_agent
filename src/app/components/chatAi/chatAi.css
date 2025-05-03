@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 112px 8px 195.2px;
+  padding: 30px 8px 30px;
   isolation: isolate;
   width: 100%;
-  height: auto;
+  height: 100%;
   position: relative;
   margin: 0 auto;
 }
@@ -13,6 +13,7 @@
 .background {
   position: absolute;
   max-width: 100%;
+  height: 100%;
   left: 0%;
   right: 0%;
   top: 0%;
@@ -28,7 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
+  height: 100%;
   position: absolute;
   left: 0%;
   right: 0%;
@@ -53,16 +54,14 @@
 .overlay-border-shadow-overlayblur {
   box-sizing: border-box;
   width: 720px;
-  height: 1048px;
-  overflow: scroll;
-  background: white;
+  height: calc(100vh - 100px);
   border: 1px solid #e2e8f0;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-    0px 1px 2px -1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6px);
   border-radius: 16px;
-  position: relative;
   background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .border {
@@ -188,8 +187,6 @@
   font-size: 15px;
   line-height: 24px;
   color: white;
-  padding: 16px;
-  padding-top: 0;
   opacity: 0.8;
 }
 
@@ -205,6 +202,7 @@
 
 .form {
   box-sizing: border-box;
+  width: 100%;
   width: 720px;
   height: 167px;
   background: rgba(255, 255, 255, 0.3);
@@ -241,10 +239,28 @@
 /* 스크롤바 전체 스타일 */
 .textarea-field::-webkit-scrollbar {
   width: 8px;
+  background: transparent;
 }
 
 /* 스크롤바 트랙 */
 .textarea-field::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* 스크롤바 핸들 */
+.textarea-field::-webkit-scrollbar-thumb {
+  background: rgba(229, 9, 20, 0.5);
+  border-radius: 4px;
+}
+
+/* 스크롤바 핸들 호버 효과 */
+.textarea-field::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 9, 20, 0.8);
+}
+
+/* 스크롤바 코너 */
+.textarea-field::-webkit-scrollbar-corner {
   background: transparent;
 }
 
@@ -259,7 +275,6 @@
   height: 44px;
   left: 663px;
   top: calc(50% - 50px / 2 - 31px);
-  background: #e2e8f0;
   border-radius: 3.35544e7px;
   border: none;
   cursor: pointer;
@@ -307,19 +322,20 @@
 /* 기존 스타일에 추가 */
 
 .messages-container {
-  max-height: 60vh;
-  padding: 1rem;
+  flex: 1;
   margin-top: 100px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+  height: calc(100vh - 250px);
 }
 
 .message {
   display: flex;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   position: relative;
 }
 
@@ -337,7 +353,7 @@
   width: auto;
   max-width: 70%;
   height: auto;
-  min-height: 40px;
+  min-height: 20px;
   left: 0;
   top: 0;
   margin: 5px;
@@ -347,14 +363,16 @@
 .message.user .paragraph-background-shadow {
   background: #E50914;
   border-radius: 15px 15px 0 15px;
-  margin-left: auto;
+
+
 }
 
 .message.assistant .paragraph-background-shadow {
   background: #333333;
   border-radius: 15px 15px 15px 0;
   margin-right: auto;
-  margin-left: 50px;
+  margin-left: 30px;
+
 }
 
 .message.assistant .overlay-shadow {
@@ -364,13 +382,12 @@
 }
 
 .message .paragraph-background-shadow p {
-  margin: 0;
-  padding: 0;
   color: white;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 600;
-  ;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .message .timestamp {
@@ -415,7 +432,7 @@
 }
 
 .video-title {
-  padding: 0.8rem;
+  padding: 0.5rem;
   font-size: 0.9rem;
   line-height: 1.4;
   color: #fff;
@@ -425,6 +442,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0;
+  text-align: left;
 }
 
 .video-item p {
@@ -448,4 +466,52 @@
 .button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+}
+
+/* 메시지 컨테이너 스크롤바 스타일 */
+.messages-container::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+.messages-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+  background: rgba(229, 9, 20, 0.5);
+  border-radius: 4px;
+}
+
+.messages-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 9, 20, 0.8);
+}
+
+.messages-container::-webkit-scrollbar-corner {
+  display: none;
+}
+
+/* 오버레이 컨테이너 스크롤바 스타일 */
+.overlay-border-shadow-overlayblur::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+.overlay-border-shadow-overlayblur::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.overlay-border-shadow-overlayblur::-webkit-scrollbar-thumb {
+  background: rgba(229, 9, 20, 0.5);
+  border-radius: 4px;
+}
+
+.overlay-border-shadow-overlayblur::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 9, 20, 0.8);
+}
+
+.overlay-border-shadow-overlayblur::-webkit-scrollbar-corner {
+  background: transparent;
 }
