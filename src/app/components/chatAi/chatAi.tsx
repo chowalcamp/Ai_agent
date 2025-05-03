@@ -3,6 +3,7 @@
 import "./chatAi.css";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import Header from "../Header";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -50,7 +51,7 @@ export default function ChatAi({ messages, inputMessage, isLoading, setInputMess
           </div>
         </div>
       </div>
-
+      <Header />
       <div className="main">
         <div className="overlay-border-shadow-overlayblur">
           {/* Beta Version Notice */}

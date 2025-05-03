@@ -566,6 +566,7 @@
 .input {
   height: 60px;
   width: 100%;
+  margin: 0;
 }
 
 .textarea-field {
@@ -577,7 +578,9 @@
   border: none;
   background: transparent;
   outline: none;
-  margin: 10px 11px 13px 11px;
+  /* margin: 10px 11px 13px 11px; */
+  padding: 20px 0 0 20px;
+  margin:0;
   resize: none;
   color: #F5F5F5;
   opacity: 0.9;
