@@ -1,6 +1,26 @@
+'use client'
+
 import "./footer.css";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 export default function Footer() {
+    const router = useRouter()
+  const pathname = usePathname()
+
+  const handleHomeClick = () => {
+    if (pathname === '/') {
+      // 현재 홈페이지에 있다면 최상단으로 스크롤
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      // 다른 페이지에 있다면 홈페이지('/')로 이동
+      router.push('/')
+    }
+  }
+
+  const handleChatAiClick = () => {
+    router.push('/chatAi')
+  }
   return (
     <div className="footer">
         <div className="footer-container">
@@ -17,9 +37,11 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="footer-menu">
-                    <div className="footer-menu-item">Home</div>
-                    <div className="footer-menu-item">Video AI</div>
-                    <div className="footer-menu-item">FAQ</div>
+                    <div className="footer-menu-item" onClick={handleHomeClick}>Home</div>
+                    <div className="footer-menu-item" onClick={handleChatAiClick}>Video AI</div>
+                    <div className="footer-menu-item" onClick={() => {
+                        document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' });
+                    }}>FAQ</div>
                 </div>
                 <div className="footer-sns">
                     <div className="footer-sns-item">
