@@ -214,7 +214,7 @@
 
 .input {
   height: 60px;
-  width: 1148px;
+  width: 1040px;
   margin: 15px;
   border-radius: 16px;
   padding-bottom: 10px;
@@ -247,7 +247,7 @@
   width: 44px;
   height: 44px;
   right: 20px;
-  top: 35px;
+  top: 30px;
   border-radius: 3.35544e7px;
   border: none;
   cursor: pointer;
@@ -565,8 +565,7 @@
 
 .input {
   height: 60px;
-  width: 100%;
-  margin: 0;
+  width: 90%;
 }
 
 .textarea-field {
@@ -578,7 +577,6 @@
   border: none;
   background: transparent;
   outline: none;
-  /* margin: 10px 11px 13px 11px; */
   padding: 20px 0 0 20px;
   margin:0;
   resize: none;
