@@ -13,20 +13,16 @@ export default function Header() {
 
   const handleHomeClick = () => {
     if (pathname === '/') {
-      // 현재 홈페이지에 있다면 최상단으로 스크롤
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } else {
-      // 다른 페이지에 있다면 홈페이지('/')로 이동
       router.push('/')
     }
   }
 
   const handleFaqClick = () => {
     if (pathname === '/') {
-      // 현재 홈페이지에 있다면 최상단으로 스크롤
       document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // 쿼리스트링으로 faq로 이동 의도를 전달
       router.push('/?scrollToFaq=1');
     }
   }
