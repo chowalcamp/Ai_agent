@@ -82,7 +82,7 @@
     }
 
     .event-section-sub_title {
-        font-size: 14px;
+        display: none;
     }
 
     .event-section-button {
@@ -97,7 +97,7 @@
         bottom: -45px;
         padding: 0 12px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
         justify-content: center;
         position: relative;
@@ -113,11 +113,12 @@
 
     .event-section-content {
         padding: 12px;
-        flex-direction: column;
+        flex-direction: row;
         width: 93%;
         height: auto;
         align-items: flex-start;
         gap: 12px;
+        
     }
 
     .event-section-title {
@@ -125,7 +126,7 @@
     }
 
     .event-section-sub_title {
-        font-size: 12px;
+        display: none;
     }
 
     .event-section-button {

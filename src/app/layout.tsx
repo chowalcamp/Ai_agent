@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Video AI',
-  description: 'Video AI',
+  title: 'PopcornAI - Video AI, Search and Recommend ',
+  description: 'PopcornAI - Video AI, Search and Recommend : PopcornAI is an AI-powered video recommendation platform that uses blockchain technology to deliver personalized content and rewards.',
 }
 
 export default function RootLayout({

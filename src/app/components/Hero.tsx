@@ -1,10 +1,21 @@
+"use client"
+
 import Image from 'next/image'
 import Header from './Header'
 import './Hero.css'
 import { ChevronRightIcon } from 'lucide-react'
 import EventSection from './eventSection/eventSection'
+import { useRouter } from 'next/navigation'
+
+  
 
 export default function Hero() {
+  const router = useRouter()
+
+  const handleChatAiClick = () => {
+    router.push('/chatAi')
+  }
+
   return (
     <section className="hero-section">
       <div className='hero-overlay'>
@@ -18,16 +29,21 @@ export default function Hero() {
       <div className='content-container'>
         <Header />
         <div className='hero-content-wrapper'>
-          {/* <div className='hero-content'>
-              <div className='title'>Unlimited movies, TV shows, and more</div>
-              <div className='subtitle'>Starts at $7.99. Cancel anytime.</div>
-              <div className='description'>Ready to watch? Enter your email to create or restart your membership.</div>
+          <div className='hero-content'>
+              <div className='title'> 
+                <span className='title-1'>AI & Blockchain </span>Unlock videos made for you
+              </div>
+              <div className='subtitle'>Get started at anytime.</div>
+              <div className='description'>Delivering media-optimized technology with AI and blockchain to recommend videos tailored to each user.</div>
             <div className='form-group'>
-              <input type="text" className='input' placeholder='Email address' />
-              <div className='button'>Get Started <ChevronRightIcon size={30} /></div >
+              <input type="text" className='input' placeholder='Search videos' />
+              <div className='button'
+               onClick={handleChatAiClick}
+              >
+              Get Started <ChevronRightIcon size={30} />
+              </div>
             </div>
-          </div> */}
-          {/* <Image src="/OMG.gif" alt="groot" width={900} height={500}/> */}
+          </div>
         </div>
         <div className='hero-bottom'>
           <EventSection />
@@ -37,3 +53,4 @@ export default function Hero() {
     </section>
   )
 }
+

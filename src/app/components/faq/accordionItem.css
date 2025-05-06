@@ -22,6 +22,7 @@
   
   .accordion-header:hover {
     background: #404040;
+    color: #E50914;
   }
   
   .accordion-content {

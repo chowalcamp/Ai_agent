@@ -1,18 +1,22 @@
 .BC-wrapper {
     width: 100%;
+    margin-top: 100px;
+    padding: 24px;
+    border-radius: 16px;
 }
 
 .BC-wrapper h2 {
     color: white;
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: left;
 }
 
 .BC-list {
     display: flex;
-    gap: 16px;
+    gap: 20px;
     overflow-x: auto;
-    padding: 10px 0;
+
 }
 
 @media (max-width: 1200px) {
@@ -25,11 +29,28 @@
 @media (max-width: 768px) {
     .BC-wrapper h2 {
         font-size: 32px;
+        text-align: left;
+        margin-bottom: 20px;
+}
+
+    .BC-wrapper {
+        margin-top: 100px;
+        padding: 0px;
+        border: none;
     }
 }
 
 @media (max-width: 390px) {
     .BC-wrapper h2 {
         font-size: 28px;
+        text-align: left;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+    .BC-wrapper {
+        margin-top: 100px;
+        padding: 0px;
+        margin: 0px;
     }
 }

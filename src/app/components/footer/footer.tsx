@@ -27,7 +27,7 @@ export default function Footer() {
             <div className="footer-top">
                 <div className="footer-logo">
                 <Image
-                        src="/NImg.svg"
+                        src="/NFTImg.svg"
                         alt="로고"
                         width={120}
                         height={40}

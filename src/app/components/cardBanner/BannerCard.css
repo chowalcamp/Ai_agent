@@ -1,19 +1,20 @@
 .banner-card {
-    width: 274px;
+    width: 282px;
     height: 308px;
     flex-shrink: 0;
     border-radius: 16px;
     background: linear-gradient(152deg, #192247 0%, #210E17 96.86%);
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+}
+.banner-card:hover {
+    border: 1px solid rgba(140, 60, 255, 0.7);
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    /* padding: 24px; */
 }
 
 .content h3 {

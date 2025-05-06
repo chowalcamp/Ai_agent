@@ -30,7 +30,7 @@ export default function Header() {
       <div className="header-content">
         <div className="logo">
           <Image
-            src="/NImg.svg"
+            src="/NFTImg.svg"
             alt="로고"
             width={148}
             height={60}
@@ -48,7 +48,7 @@ export default function Header() {
               HOME
             </div>
             <div className="header-menu-bar-item" onClick={handleChatAiClick}>
-              VIDEO AI
+               PopcornAI
             </div>
             <div className="header-menu-bar-item" onClick={() => {
               document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' });

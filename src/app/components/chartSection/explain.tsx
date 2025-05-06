@@ -26,7 +26,7 @@ export default function Explain() {
                     </div>
                     <div className="explain-content-item-text-container">
                         <p className="explain-content-item-title">Trade NFTs</p>
-                        <p className="explain-content-item-text">Use G8D to acquire unique digital artifacts and destiny-altering collectibles</p>
+                        <p className="explain-content-item-text">Use PopAI token to acquire unique digital artifacts and destiny-altering collectibles</p>
                     </div>
                 </div>
                 <div className="explain-content-item">
@@ -35,7 +35,7 @@ export default function Explain() {
                     </div>
                     <div className="explain-content-item-text-container">
                         <p className="explain-content-item-title">Join Governance</p>
-                        <p className="explain-content-item-text">Participate in the governance of the G8D ecosystem and shape its future</p>
+                        <p className="explain-content-item-text">Participate in the governance of the PopAI token ecosystem and shape its future</p>
                     </div>
                 </div>
                 <div className="explain-content-item">
@@ -44,7 +44,7 @@ export default function Explain() {
                     </div>
                     <div className="explain-content-item-text-container">
                         <p className="explain-content-item-title">Earn Rewards</p>
-                        <p className="explain-content-item-text">Stake G8D to earn passive income and unlock special platform perks</p>
+                        <p className="explain-content-item-text">Stake PopAI token to earn passive income and unlock special platform perks</p>
                     </div>
                 </div>
             </div>

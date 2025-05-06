@@ -1,16 +1,27 @@
 .chartSection-container {
     width: 100%;
     max-width: 1144px;
-    padding: 48px 0px;
-    margin-bottom: 100px;
+    padding: 48px;
+    margin-top: 100px;
+    border-radius: 16px;
+    backdrop-filter: blur(15px);
+
 }
 
 .chartSection-container h2 {
     font-weight: bold;
-    margin-bottom: 16px;
     color: white;
     font-size: 48px;
     text-align: center;
+    margin-bottom: 0px;
+}
+
+.chartSection-container h4 {
+    font-size: 18px;
+    color: rgba(209, 213, 220, 0.8);
+    text-align: center;
+    font-weight: 400;
+    margin: 0px;
 }
 
 .chartSection-content {
@@ -18,18 +29,30 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
     gap: 100px;
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
     .chartSection-container {
         margin-top: 100px;
         margin-bottom: 50px;
+        padding: 0px;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
     }
 
     .chartSection-container h2 {
         font-size: 32px;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .chartSection-container h4 {
+        font-size: 16px;
+        text-align: left;
+        padding-left: 10px;
     }
 
     .chartSection-content {

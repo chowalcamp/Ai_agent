@@ -8,10 +8,10 @@ export default function EventSection() {
             <div className="event-section-content">
                 <div>
                     <p className="event-section-title">
-                        The Netflix you love for just $7.99.
+                        Your taste, your videos.
                     </p>
                     <p className="event-section-sub_title">
-                        Get our most affordable, ad-supported plan.
+                    Enjoy videos customized to your taste with AI and blockchain.
                     </p>
                 </div>
                 <div className="event-section-button">

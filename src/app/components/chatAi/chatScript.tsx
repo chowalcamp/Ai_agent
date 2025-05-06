@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getVideoRecommendationResponse } from "@/apis/chat";
 import { GPTMessage } from "@/apis/openai";
 import ChatAi from "./chatAi";
-import Header from "../Header";
+
 interface ChatMessage {
   role: "user" | "assistant";
   content: string;

@@ -4,9 +4,9 @@ import './cardList.css'
 import { ChevronRightIcon, ChevronLeftIcon } from "lucide-react";
 import { useState, useEffect } from 'react';
 import Card from "./card";
-import { getTrendingVideos, YouTubeVideo } from '@/app/utils/youtube';
+import { getNFTAIVideos, YouTubeVideo } from '@/app/utils/youtube';
 
-export default function CardList() {
+export default function NFTCardList() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [videos, setVideos] = useState<YouTubeVideo[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -15,10 +15,10 @@ export default function CardList() {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const data = await getTrendingVideos();
+        const data = await getNFTAIVideos();
         setVideos(data);
       } catch (err) {
-        setError('Failed to load trending videos');
+        setError('Failed to load NFT videos');
         console.error(err);
       } finally {
         setIsLoading(false);
@@ -29,7 +29,7 @@ export default function CardList() {
   }, []);
 
   const handleScroll = (direction: 'left' | 'right') => {
-    const container = document.querySelector('.card-list');
+    const container = document.querySelector('.nft-card-list');
     if (container) {
       const scrollAmount = 280 + 20; // 카드 너비 + gap
       const newPosition = direction === 'left' 
@@ -54,13 +54,13 @@ export default function CardList() {
   }
 
   return (
-    <div className="card-list-wrapper">
-      <h2><span>Most</span>Popular Videos 🔥</h2>
+    <div className="card-list-wrapper" style={{ marginTop: '40px' }}>
+      <h2><span>Trending</span>NFT Videos 🏆</h2>
       <div className="card-list-container">
         <div className="card-list-left-arrow" onClick={() => handleScroll('left')}>
           <ChevronLeftIcon size={30} />
         </div>
-        <div className="card-list">
+        <div className="nft-card-list card-list">
           {videos.map((video) => (
             <Card key={video.id} video={video} />
           ))}
@@ -71,4 +71,4 @@ export default function CardList() {
       </div>
     </div>
   );
-}
+} 

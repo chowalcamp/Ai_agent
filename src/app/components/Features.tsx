@@ -4,12 +4,16 @@ import CardList from './videoCards/cardList'
 import FaqList from './faq/faqList'
 import RoadMap from './roadmap/roadmap'
 import ChartSection from './chartSection/chartSection'
+import NFTCardList from './videoCards/NFTCardList'
 export default function Features() {
   return (
     <section className="features-section">
       <div className="feature-item">
         <div className="feature-content">
         <CardList />
+        </div>
+        <div className="feature-content">
+        <NFTCardList />
         </div>
       </div>
       <div className="feature-item">

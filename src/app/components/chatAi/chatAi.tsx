@@ -61,7 +61,7 @@ export default function ChatAi({ messages, inputMessage, isLoading, setInputMess
 
           {/* Header Container */}
           <div className="container">
-            <h2 className="heading">Video AI</h2>
+            <h2 className="heading">PopcornAI</h2>
             <div className="overlay">
               <div className="background-dot"></div>
               <span>8601 active</span>

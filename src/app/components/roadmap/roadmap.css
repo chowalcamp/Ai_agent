@@ -97,6 +97,9 @@
     border-radius: 12px;
     position: relative;
     margin-top: 40px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(140, 60, 255, 0.9);
+    box-shadow: 0 4px 30px rgba(140, 6, 255, 0.7);
   }
   
   .roadmap-content h3 {
@@ -215,6 +218,10 @@
     .roadmap-footer p {
       font-size: 16px;
     }
+
+    .roadmap-footer {
+      margin-top: 20px;
+    }
   }
 
   @media (max-width: 390px) {
@@ -224,5 +231,10 @@
 
     .roadmap-subtitle {
       font-size: 14px;
+    }
+
+    .roadmap-footer {
+      margin-top: 10px;
+      margin-bottom: 40px;
     }
   }
