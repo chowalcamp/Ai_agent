@@ -10,7 +10,7 @@
 }
 
 .header-content {
-  max-width: 1148px;
+  max-width: 1200px;
   height: 80px;
   margin: 0 auto;
   display: flex;
@@ -24,11 +24,11 @@
 }
 
 .logo {
-  width: 148px;
+  /* width: 148px;
   height: 60px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .logo img {
