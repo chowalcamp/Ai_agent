@@ -36,8 +36,7 @@
   height: 60px;
   justify-content: center;
   align-items: center;
-  /* margin-left: 100px; */
-  
+  cursor: pointer;  
 }
 
 .header-actions {
@@ -117,7 +116,7 @@
   .header {
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     margin: 0 15px;
   }
 
@@ -217,7 +216,7 @@
 /* 모바일 반응형 */
 @media (max-width: 390px) {
   .header {
-    width: 90%;
+    width: 100%;
   }
 
   .header-content {

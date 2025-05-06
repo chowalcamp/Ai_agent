@@ -26,18 +26,18 @@ export default function Hero() {
           priority
           style={{ objectFit: 'cover', opacity: 0.42 }}
         />
-      <div className='content-container'>
+      <div className='hero-content-container'>
         <Header />
         <div className='hero-content-wrapper'>
           <div className='hero-content'>
-              <div className='title'> 
-                <span className='title-1'>AI & Blockchain </span>Unlock videos made for you
+              <div className='hero-title'> 
+                <span className='hero-title-1'>AI & Blockchain </span>Unlock videos made for you
               </div>
-              <div className='subtitle'>Get started at anytime.</div>
-              <div className='description'>Delivering media-optimized technology with AI and blockchain to recommend videos tailored to each user.</div>
-            <div className='form-group'>
-              <input type="text" className='input' placeholder='Search videos' />
-              <div className='button'
+              <div className='hero-subtitle'>Get started at anytime.</div>
+              <div className='hero-description'>Delivering media-optimized technology with AI and blockchain to recommend videos tailored to each user.</div>
+            <div className='hero-form-group'>
+              <input type="text" className='hero-input' placeholder='Search videos' />
+              <div className='hero-button'
                onClick={handleChatAiClick}
               >
               Get Started <ChevronRightIcon size={30} />

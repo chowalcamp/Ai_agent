@@ -21,7 +21,17 @@ export default function Header() {
     }
   }
 
-  const handleChatAiClick = () => {
+  const handleFaqClick = () => {
+    if (pathname === '/') {
+      // 현재 홈페이지에 있다면 최상단으로 스크롤
+      document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // 쿼리스트링으로 faq로 이동 의도를 전달
+      router.push('/?scrollToFaq=1');
+    }
+  }
+
+  const handlePopcornAiClick = () => {
     router.push('/chatAi')
   }
 
@@ -34,6 +44,7 @@ export default function Header() {
             alt="로고"
             width={148}
             height={60}
+            onClick={handleHomeClick}
           />
         </div>
         <div className="header-actions">
@@ -47,13 +58,10 @@ export default function Header() {
             <div className="header-menu-bar-item" onClick={handleHomeClick}>
               HOME
             </div>
-            <div className="header-menu-bar-item" onClick={handleChatAiClick}>
+            <div className="header-menu-bar-item" onClick={handlePopcornAiClick}>
                PopcornAI
             </div>
-            <div className="header-menu-bar-item" onClick={() => {
-              document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' });
-              setIsMenuOpen(false);
-            }}>
+            <div className="header-menu-bar-item" onClick={handleFaqClick}>
               FAQ
             </div>
           </div>

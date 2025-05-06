@@ -18,7 +18,17 @@ export default function Footer() {
     }
   }
 
-  const handleChatAiClick = () => {
+  const handleFaqClick = () => {
+    if (pathname === '/') {
+      // 현재 홈페이지에 있다면 최상단으로 스크롤
+      document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // 쿼리스트링으로 faq로 이동 의도를 전달
+      router.push('/?scrollToFaq=1');
+    }
+  }
+
+  const handlePopcornAiClick = () => {
     router.push('/chatAi')
   }
   return (
@@ -38,10 +48,8 @@ export default function Footer() {
                 </div>
                 <div className="footer-menu">
                     <div className="footer-menu-item" onClick={handleHomeClick}>Home</div>
-                    <div className="footer-menu-item" onClick={handleChatAiClick}>Video AI</div>
-                    <div className="footer-menu-item" onClick={() => {
-                        document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' });
-                    }}>FAQ</div>
+                    <div className="footer-menu-item" onClick={handlePopcornAiClick}>Popcorn AI</div>
+                    <div className="footer-menu-item" onClick={handleFaqClick}>FAQ</div>
                 </div>
                 <div className="footer-sns">
                     <div className="footer-sns-item">
