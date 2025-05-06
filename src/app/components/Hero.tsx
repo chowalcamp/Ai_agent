@@ -36,11 +36,11 @@ export default function Hero() {
               <div className='hero-subtitle'>Get started at anytime.</div>
               <div className='hero-description'>Delivering media-optimized technology with AI and blockchain to recommend videos tailored to each user.</div>
             <div className='hero-form-group'>
-              <input type="text" className='hero-input' placeholder='Search videos' />
+              {/* <input type="text" className='hero-input' placeholder='Search videos' /> */}
               <div className='hero-button'
                onClick={handleChatAiClick}
               >
-              Get Started <ChevronRightIcon size={30} />
+              Start Chat <ChevronRightIcon size={30} />
               </div>
             </div>
           </div>
