@@ -64,7 +64,7 @@ export default function ChatAi({ messages, inputMessage, isLoading, setInputMess
             <h2 className="heading">PopcornAI</h2>
             <div className="overlay">
               <div className="background-dot"></div>
-              <span>8601 active</span>
+              <span className="background-dot-text">8601 active</span>
             </div>
           </div>
 
