@@ -162,13 +162,17 @@
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  padding-bottom: 4px;
+  padding-bottom: 1px;
   box-shadow: 0 4px 30px rgba(140, 6, 255, 0.7);
 }
 
 .hero-button:hover {
   background-color: #B82869;
   box-shadow: 0 4px 30px rgba(128, 124, 131, 0.7);
+}
+
+.hero-button-icon {
+  margin-top: 3px;
 }
 
 .hero-bottom {
@@ -187,6 +191,7 @@
     height: 100%;
     background: linear-gradient(90deg, #210D16 16%, #B82869 25%, #E50914 50%, #B82869 75%, #210D16 84%);
 }
+
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
@@ -234,12 +239,18 @@
   .hero-button {
     width: 120px;
     height: 40px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
   }
+
+  .hero-button-icon {
+    margin: 0;
+    size: 20;
+  }
+
   .hero-button svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     justify-content: center;
     align-items: center;
     }

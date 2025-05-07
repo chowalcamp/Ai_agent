@@ -40,7 +40,7 @@ export default function Hero() {
               <div className='hero-button'
                onClick={handleChatAiClick}
               >
-              Start Chat <ChevronRightIcon size={30} />
+              Start Chat <ChevronRightIcon className='hero-button-icon' />
               </div>
             </div>
           </div>
