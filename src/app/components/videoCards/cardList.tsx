@@ -55,7 +55,9 @@ export default function CardList() {
 
   return (
     <div className="card-list-wrapper">
-      <h2><span>Most</span>Popular Videos 🔥</h2>
+      <div className="card-list-wrapper-title">
+        <span>Most</span>Popular Videos 🔥
+      </div>
       <div className="card-list-container">
         <div className="card-list-left-arrow" onClick={() => handleScroll('left')}>
           <ChevronLeftIcon size={30} />

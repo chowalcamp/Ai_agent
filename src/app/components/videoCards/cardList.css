@@ -3,18 +3,18 @@
     position: relative;
 }
 
-.card-list-wrapper h2 {
+.card-list-wrapper-title {
     color: white;
     font-size: 42px;
     font-weight: bold;
     margin: 0;
     display: flex;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     height: 80px;
     padding: 20px 0px;
 }
 
-.card-list-wrapper h2 span:first-child {
+.card-list-wrapper-title span:first-child {
     color: #E50914;
     margin-right: 12px;
     font-size: 48px;
@@ -92,23 +92,25 @@
         padding: 0px;
     }
 
-    .card-list-wrapper h2 {
+
+
+    .card-list-wrapper-title {
         font-size: 32px;
     }
 
-    .card-list-wrapper h2 span:first-child {
+    .card-list-wrapper-title span:first-child {
         font-size: 32px;
     } 
 
     .card {
-        width: 100%;
-        height: 100%;
+        /* width: 48%; */
+        /* height: 100%; */
         padding: 0 10px;
     }
 
     .card-list {
         gap: 15px;
-        padding: 0 30px;
+        padding: 0px;
     }
 
     .card-list-left-arrow,
@@ -118,18 +120,28 @@
     }
 }
 
+@media (max-width: 450px) {
+    .card-list-wrapper-title {
+        font-size: 28px;
+    }
+
+    .card-list-wrapper-title span:first-child {
+        font-size: 28px;
+    }  
+}
+
 @media (max-width: 390px) {
     .card-list-wrapper {
         padding: 5px 0;
     }
 
-    .card-list-wrapper h2 {
-        font-size: 28px;
+    .card-list-wrapper-title {
+        font-size: 26px;
         font-weight: bold;
     }
 
-    .card-list-wrapper h2 span:first-child {
-        font-size: 28px;
+    .card-list-wrapper-title span:first-child {
+        font-size: 26px;
     }
 
     .card {
@@ -139,7 +151,7 @@
 
     .card-list {
         gap: 5px;
-        padding: 0px;
+        padding:0 20px 0 10px;
     }
 
     .card-list-left-arrow,
